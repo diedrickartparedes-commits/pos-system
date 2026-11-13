@@ -1,0 +1,39 @@
+{
+  "name": "mypos-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "db:deploy": "prisma migrate deploy",
+    "db:generate": "prisma generate",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "import:legacy": "tsx scripts/import-legacy.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.10.1",
+    "@prisma/client": "^7.10.1",
+    "@vercel/blob": "^1.1.1",
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^17.2.3",
+    "jose": "^6.1.0",
+    "next": "^16.2.0",
+    "pg": "^8.16.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^22.19.0",
+    "@types/pg": "^8.15.5",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "prisma": "^7.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}
